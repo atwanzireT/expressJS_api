@@ -36,5 +36,10 @@ app.get('/ab+cd', (req, res) => {
 
 // This route path will match /abe and /abcde.
 app.get('/ab(cd)?e', (req, res) => {
-  res.send('ab(cd)?e')
-})
+  res.send('ab(cd)?e');
+});
+
+// Route parameters
+app.get('/users/:userId/books/:bookId', (req, res) => {
+    res.send(req.params)
+});
